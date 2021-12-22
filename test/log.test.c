@@ -1,6 +1,5 @@
 #define FLAT_INCLUDES
 #include "../log.h"
-#include "../../debug/debug.h"
 
 int main()
 {
