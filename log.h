@@ -41,7 +41,7 @@ void _log (log_level level, const char * fmt, ...);
    @brief Printf-like function that prints a debug message to stderr. A newline is appended to the resulting message
 */
 
-#define log_fatal(fmt, ...) { _log (LOG_ERROR, "FATAL: %s: %s: " fmt "\n", __FILE__, __func__, ##__VA_ARGS__); goto fail; }
+#define log_fatal(fmt, ...) { _log (LOG_ERROR, "FATAL: %s:%d: %s: " fmt "\n", __FILE__, __LINE__, __func__, ##__VA_ARGS__); goto fail; }
 /**<
    @brief Printf-like function that prints a fatal error to stderr and then jumps to the 'fail' label. A newline is appended to the resulting message
 */
